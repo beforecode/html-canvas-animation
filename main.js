@@ -1,6 +1,6 @@
 const canvas = document.querySelector("canvas")
 var c = canvas.getContext('2d')
-var colors = ["#FD841F","#E14D2A","#CD104D","#9C2C77"]
+var colors = ["#FF731D","#FFF7E9","#5F9DF7","#1746A2"]
 
 class Circle {
 	constructor(x, y, r, dx, dy, color){
@@ -40,14 +40,14 @@ class Circle {
 
 var circlesArr = []
 
-for(let i=0; i<10;i++){	
+for(let i=0; i<100;i++){	
 	let x = Math.floor(Math.random() * canvas.width)
 	let y = Math.floor(Math.random() * canvas.height)
 	let r = Math.random() * 10
-	if(x+r > canvas.width) x=x-r
-	if(x-r < 0) x=x+r
-	if(y+r > canvas.width) y=y-r
-	if(y-r < 0) y=y+r
+	if(x+r > canvas.width) x=x-40
+	if(x-r < 0) x=x+40
+	if(y+r > canvas.width) y=y-40
+	if(y-r < 0) y=y+40
 	let dx = Math.random() * 4
 	let dy = Math.random() * 4
 	let color = colors[Math.round(Math.random() * colors.length - 1)]
